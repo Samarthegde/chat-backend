@@ -22,7 +22,7 @@ const app = (0, express_1.default)();
 const port = 3001;
 //CORS Configuration 
 const corsOptions = {
-    origin: 'https://chatapp-d658c.web.app',
+    origin: 'https://chat-frontend-ee5da.web.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
