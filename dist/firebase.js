@@ -36,11 +36,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.db = void 0;
 const admin = __importStar(require("firebase-admin"));
 const path = __importStar(require("path"));
-// Initialize Firebase Admin SDK
-const serviceAccount = path.join(__dirname, '../firestore.json');
+const fs = __importStar(require("fs"));
+
+// Load the service account key file
+const serviceAccount = JSON.parse(fs.readFileSync(path.join(__dirname, '../firestore.json'), 'utf8'));
+
+// Initialize Firebase Admin SDK with the credentials
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 });
+
 const db = admin.firestore(); // Reference to Firestore
+
 exports.db = db;
 //# sourceMappingURL=firebase.js.map
