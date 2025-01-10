@@ -1,5 +1,5 @@
-import * as admin from 'firebase-admin';
-import * as path from 'path';
+import  admin from 'firebase-admin';
+import path from 'path';
 
 // Initialize Firebase Admin SDK
 const serviceAccount = path.join(__dirname, '../firestore.json');
